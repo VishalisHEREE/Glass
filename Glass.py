@@ -96,11 +96,11 @@ for feature in hist_features:
 
 st.sidebar.subheader("Boxplot")
 
-boxplot_columns = st.sidebar.multiselect("Select features to create histograms:",
+boxplot_columns = st.sidebar.multiselect("Select features to create boxplots:",
                                             ('RI', 'Na', 'Mg', 'Al', 'Si', 'K', 'Ca', 'Ba', 'Fe'))
 
 for i in boxplot_columns:
-    st.subheader(f"Histogram for {i}")
+    st.subheader(f"Boxplot for {i}")
     plt.figure(figsize = (12, 6))
     sns.boxplot(glass_df[i])
     st.pyplot()
